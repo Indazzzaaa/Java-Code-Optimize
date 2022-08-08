@@ -1,19 +1,22 @@
-import Matrix.Matrix;
+import General.OnArrays;
+import General.OnStrings;
+import Hashings.Problems;
+import Mathssss.MathProblems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.HashSet;
+import java.util.Random;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int[][] arr = {
-                {1, 2, 3, 4},
-                {5, 6, 7,8},
-                { 9, 10, 11,12},
-                {13, 14, 15,16}
-        };
-        System.out.println(Arrays.deepToString(arr));
+
+
+
+
 
     }
+
 
 }
 
