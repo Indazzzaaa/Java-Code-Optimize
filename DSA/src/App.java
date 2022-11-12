@@ -1,62 +1,27 @@
-import LinkedList.Doubly.DoublyLinkedList;
-import LinkedList.Doubly.DoublyNode;
-import LinkedList.Singly.LinkedList;
-import LinkedList.Singly.Node;
-import  LinkedList.*;
-
-import java.util.Random;
+import java.util.ArrayDeque;
+import java.util.Queue;
+import  Queue.Problems;
 
 public class App {
     public static void main(String[] args) {
-        int[] arr1 =  new int[5];
-        int[] arr2 = {2,4,6,8,10};
-        Random random = new Random();
-        for(int i=0;i< arr1.length;i++){
-            arr1[i]=random.nextInt(0,100);
+        ArrayDeque<Integer> dq = new ArrayDeque<>();
+        dq.offerFirst(10);
+        dq.offer(20);
+        dq.offer(30);
+        dq.offer(40);
+        var it = dq.iterator();
+//        System.out.println(it.next());
+
+        for(int i=0;i<2;i++){
+            it.next();
+            it.remove();
         }
-        DoublyNode head1=null;
-        DoublyNode head2=null;
-        for(var i: arr1){
-            head1 = DoublyLinkedList.insertEnd(head1, i);
-        }
-        for(var j: arr2){
-            head2 = DoublyLinkedList.insertEnd(head2, j);
-        }
+//        it.remove();
 
+        for(var x : dq) System.out.println(x);
 
-
-        System.out.println("Before sorting : \n");
-        DoublyLinkedList.traverse(head1);
-//        DoublyLinkedList.traverse(head2);
-
-        System.out.println("After merging : \n");
-        DoublyNode head = Problems.sortDoubly(head1);
-        DoublyLinkedList.traverse(head);
-
-
-
-
-
-
-
-
-
-
-
-//        populateLL(head);
 
     }
-
-    private static void populateLL(Node head) {
-        int data = 0;
-        Random random = new Random();
-        for (int i = 0; i < 5; i++) {
-            data = random.nextInt(0, 10);
-            head = LinkedList.insertEnd(head, data);
-        }
-    }
-
-
 
 
 }
